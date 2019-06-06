@@ -1,0 +1,29 @@
+{
+"type": "localModelBoolean",
+"name": "name model here",
+"description": "describe model here",
+"variableNames": ["x1","x2","x3","y"],
+"numberOfStates": [2,2,2,2],
+"updateRules": [
+    {
+	"node": "x1",
+	"inputs": ["x1","y"],
+	"booleanFunction": "x1 AND y"
+    },
+    {
+	"node": "x2",
+	"inputs": ["x2","x3"],
+	"booleanFunction": "x2 AND NOT x3"
+    },
+    {
+	"node": "x3",
+	"inputs": ["x1","y","x2"],
+	"booleanFunction": "x1 AND (y OR x2)"
+    },
+    {
+	"node": "y",
+	"inputs": ["y"],
+	"booleanFunction": "y"
+    }
+  ]
+}

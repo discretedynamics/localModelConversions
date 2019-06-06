@@ -1,0 +1,73 @@
+{
+  "type": "localModelBoolean",
+  "name": "name model here",
+  "description": "describe model here",
+  "variableNames": [
+    "x1",
+    "x2",
+    "x3",
+    "y"
+  ],
+  "numberOfStates": [
+    2,
+    2,
+    2,
+    2
+  ],
+  "updateRules": [
+    {
+      "node": "x1",
+      "inputs": [
+        "x1",
+        "y"
+      ],
+      "table": [
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "node": "x2",
+      "inputs": [
+        "x2",
+        "x3"
+      ],
+      "table": [
+        0,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "node": "x3",
+      "inputs": [
+        "x1",
+        "y",
+        "x2"
+      ],
+      "table": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "node": "y",
+      "inputs": [
+        "y"
+      ],
+      "table": [
+        0,
+        1
+      ]
+    }
+  ]
+}
