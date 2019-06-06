@@ -1,0 +1,29 @@
+{
+  "type": "directedGraph",
+  "name": "name model here",
+  "description": "describe model here",
+  "edges": [
+    {
+      "node": "x1",
+      "inputs": [
+        "x2",
+        "x3"
+      ]
+    },
+    {
+      "node": "x2",
+      "inputs": [
+        "x1",
+        "x3"
+      ]
+    },
+    {
+      "node": "x3",
+      "inputs": [
+        "x1",
+        "x2",
+        "x3"
+      ]
+    }
+  ]
+}

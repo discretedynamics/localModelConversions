@@ -1,0 +1,61 @@
+{
+"type": "localModelExpandedTables",
+"name": "name model here",
+"description": "describe model here",
+"variableNames": ["k1","k2","x1","x2","x3"],
+"numberOfStates": [2,2,2,2,3],
+"updateRules": [
+    {
+	"node": "x1",
+	"inputs": ["x1","k1"],
+	"expandedTable": [
+		[[0,0],0],
+		[[0,1],0],
+		[[1,0],0],
+		[[1,1],1]
+	]
+    },
+    {
+	"node": "x2",
+	"inputs": ["x2","x3"],
+	"expandedTable": [
+		[[0,0],0],
+		[[0,1],0],
+		[[0,2],0],
+		[[1,0],0],
+		[[1,1],1],
+		[[1,2],1]
+	]
+    },
+    {
+	"node": "x3",
+	"inputs": ["x1","k2","x2"],
+	"expandedTable": [
+		[[0,0,0],0],
+		[[0,0,1],0],
+		[[0,1,0],0],
+		[[0,1,1],0],
+		[[1,0,0],0],
+		[[1,0,1],1],
+		[[1,1,0],1],
+		[[1,1,1],2]
+	]
+    },
+    {
+	"node": "k1",
+	"inputs": ["k1"],
+	"expandedTable": [
+		[[0],0],
+		[[1],1]
+	]
+    },
+    {
+	"node": "k2",
+	"inputs": ["k2"],
+	"expandedTable": [
+		[[0],0],
+		[[1],1]
+	]
+    }
+  ]
+}

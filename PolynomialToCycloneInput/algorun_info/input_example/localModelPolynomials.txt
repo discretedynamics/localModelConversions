@@ -1,0 +1,25 @@
+{
+"type": "localModelPolynomials",
+"name": "name model here",
+"description": "describe model here",
+"variableNames": ["x1","x2","x3"],
+"numberOfStates": [2,2,2],
+"updateRules": [
+    {
+	"node": "x1",
+	"inputs": ["x2","x3"],
+	"polynomial": "x2*x3"
+    },
+    {
+	"node": "x2",
+	"inputs": ["x1","x3"],
+	"polynomial": "x1*x3"
+    },
+    {
+	"node": "x3",
+	"inputs": ["x1","x2","x3"],
+	"polynomial": "x1*(x2+x3)"
+    }
+  ]
+}
+

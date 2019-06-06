@@ -1,0 +1,62 @@
+{
+   "manifest_version": "2.0",
+
+   "algo_name": "expandedTableToTable",    // the name of your algorithm
+
+   "algo_version": "0.0.1",           // the versuib of your algorithm
+	
+   "algo_summary": "Python script that takes a local model JSON file where the functions are formatted as expanded tables, and outputs a local model JSON file where they're formated as (compressed) tables",
+	
+   "algo_description": "This script takes as input a local model, formatted in one of the discretedynamics::localModelxxxxxxx.json formats, and calculates the wiring diagram (without checking for potentially fictious variables)", // a few lines description of your algorithm (basic html accepted)
+
+   "algo_website": "https://github.com/mikestillman/turing/tree/master/discretedynamics/localModelConversions/localModelToWiringDiagram", // url where users can find more information about your algorithm and/or a link to a tutorial or manual to run the algorithm
+    
+   "algo_keywords": ["wiring diagram","transformation"], // a list of keywords describing your algorithm
+	
+   "published_paper": { // if you already have a published paper for your algorithm. leave blank if not.
+            "title": "",
+            "url": ""
+    	},
+	
+   "algo_authors": [ 
+	{
+	"name": "Matthew Macauley",
+	"email": "macaule@clemson.edu", 
+	"profile_picture": "", 
+	"personal_website": "http://www.math.clemson.edu/~macaule/", 
+	"organization": "Clemson University", 
+	"org_website": "http://www.math.iastate.edu"
+	}],
+
+   "algo_packager": { 
+   "name": "Matthew Macauley",
+   "email": "macaule@clemson.edu", 
+   "profile_picture": "", 
+   "personal_website": "http://www.math.clemson.edu/~macaule/", 
+   "organization": "Clemson University", 
+   "org_website": "http://www.math.clemson.edu"
+   },
+
+
+   // all "type" keys listed below expect a value to be one of MIME types: https://www.sitepoint.com/web-foundations/mime-types-complete-list/
+   "algo_exec": "python3 expandedTableToTable.py $localModelPolynomials", 
+   // the command to start algorithm execution. Use "$" to mark an input to be passed to the command.
+	
+   "algo_input": [ // list all input parameters and their types. Names must match the names in the command above.
+	    { "name": "localModelPolynomials", "src": "file", "type": "text/plain", "accepted_format": "algorun/undefined" }// text or number passed immediately in the command-line
+	],
+	
+	// list all output produced by your algorithm. "result_format" is used on the AlgoPiper wesbsite for input/output types listing
+   "algo_output": [ 
+		{ 
+		"name": "WiringDiagram", "src": "WiringDiagram.txt", "type": "text/plain", "format": "algorun/undefined" 
+		} // output file named "output1.txt" is text
+	],
+
+   "algo_parameters": { 
+   		      "caching": "on" // the default caching scheme 
+		      },
+	
+  "algo_image": "" // Example: "ahosny/react". leave "" if you did not upload your algorithm to docker hub or if you do not know what docker hub is :).
+
+}
