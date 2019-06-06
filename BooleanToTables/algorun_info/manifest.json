@@ -4,10 +4,10 @@
 ModelBooleanToTables", 
 	"algo_version": "0.0.1",
 	"algo_summary": "Python script to transform a local model in Boolean function form to transition table form ",
-	"algo_description": "This script takes as input a local model, represented as a set of Boolean functions and formatted in the discretedynamics::localModelBoolean format. The script transforms the representation to transition tables, formatted in the discretedynamics::localModelTables format", 
+	"algo_description": "This script takes as input a local model, represented as a set of Boolean functions and formatted in the discretedynamics::localModelBoolean format. The script transforms the representation to transition tables, formatted in the discretedynamics::localModelTables format.", 
 	"algo_website": "https://github.com/discretedynamics/localmodelconversions/booleantotables
 ", 
-    "algo_keywords": ["local model","transformation"], 
+    "algo_keywords": ["local model","conversion"], 
 	"published_paper": { 
             "title": "",
             "url": ""

@@ -1,2 +1,1 @@
-Use this directory as a template to create your Algorun container.
-For more information about how to do it, please refer to our [Documentation](http://algorun.org/documentation)
+This script takes as input a local model, represented as a set of Boolean functions and formatted in the discretedynamics::localModelBoolean format. The script transforms the representation to transition tables, formatted in the discretedynamics::localModelTables format.
