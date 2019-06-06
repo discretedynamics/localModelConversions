@@ -1,2 +1,1 @@
-Use this directory as a template to create your Algorun container.
-For more information about how to do it, please refer to our [Documentation](http://algorun.org/documentation)
+This script takes as input a local model, represented as a set of transition tables, formatted in the discretedynamics::localModelTables format. For each table, it determines the non-essential variables and deletes them from the table. The final output is again a local model (in localModelTables format).

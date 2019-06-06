@@ -18,10 +18,11 @@ for i,elt in enumerate(json_data['updateRules']):
         current_table.append(row[1])
     json_data['updateRules'][i]['table'] = current_table 
     json_data['updateRules'][i].pop('expandedTable', None)
-    
+json_data['type'] = 'localModelTables'
+
 #print(json_data)
 
 # write to output file
-output_filename = 'table_outputfile.json'
+output_filename = 'localModelTables.txt'
 with open(output_filename, 'w') as outfile:  
     json.dump(json_data, outfile, indent=4)

@@ -1,34 +1,34 @@
 {
    	"manifest_version": "2.0",
-	"algo_name": "ReduceTables", // the name of your algorithm
-	"algo_version": "0.0.1", // the versuib of your algorithm
-	"algo_summary": "Python script to delete non-essential variables from Tables", // a 1-line summary of your algorithm
-	"algo_description": "This script takes as input a local model, represented as a set of transition tables, formatted in the discretedynamics::localModelTables format. For each table, it determines the non-essential variables and deletes them from the table. The final output is again a local model (in localModelTables format).", // a few lines description of your algorithm (basic html accepted)
-	"algo_website": "https://github.com/mikestillman/turing/tree/master/discretedynamics/localModelConversions/ReduceTables", // url where users can find more information about your algorithm and/or a link to a tutorial or manual to run the algorithm
-    "algo_keywords": ["local model","reduction"], // a list of keywords describing your algorithm
-	"published_paper": { // if you already have a published paper for your algorithm. leave blank if not.
+	"algo_name": "reduceTables", 
+	"algo_version": "0.0.1",
+	"algo_summary": "Python script to delete non-essential variables from Tables",
+	"algo_description": "This script takes as input a local model, represented as a set of transition tables, formatted in the discretedynamics::localModelTables format. For each table, it determines the non-essential variables and deletes them from the table. The final output is again a local model (in localModelTables format).", 
+	"algo_website": "https://github.com/discretedynamics/localmodelconversions/reducetables
+", 
+    "algo_keywords": ["local model","conversion", "reduction"], 
+	"published_paper": { 
             "title": "",
             "url": ""
     	},
-	"algo_authors": [ // a list of all the algorithm's authors
+	"algo_authors": [ 
 		{
 			"name": "Claus Kadelka",
-			"email": "ckadelka@iastate.edu", // make sure you have a gravatar (http://gravatar.com)
-	"profile_picture": "", // if you don't have a gravatar, put a profile picture in algorun_info folder and refer to it here
-			"personal_website": "https://math.iastate.edu/directory/claus-kadelka/", // leave "" if not available
-			"organization": "Iowa State University", // leave "" if not available
-			"org_website": "https://math.iastate.edu" // leave "" if not available
+			"email": "ckadelka@iastate.edu", 
+		        "profile_picture": "",
+			"personal_website": "https://math.iastate.edu/directory/claus-kadelka/",
+			"organization": "Iowa State University", 
+			"org_website": "https://math.iastate.edu" 
 		}
 	],
-	"algo_packager": { // the one who packaged the algorithm into AlgoRun container.
+	"algo_packager": { 
 	    "name": "Claus Kadelka",
-	    "email": "ckadelka@iastate.edu", // make sure you have a gravatar (http://gravatar.com)
-            "profile_picture": "", // if you don't have a gravatar, put a profile picture in algorun_info folder and refer to it here
-	    "personal_website": "https://math.iastate.edu/directory/claus-kadelka/", // leave "" if not available
-	    "organization": "Iowa State University", // leave "" if not available
-	    "org_website": "https://math.iastate.edu" // leave "" if not available
+	    "email": "ckadelka@iastate.edu", 
+            "profile_picture": "", 
+	    "personal_website": "https://math.iastate.edu/directory/claus-kadelka/",
+	    "organization": "Iowa State University", 
+	    "org_website": "https://math.iastate.edu" 
 	},
-	// all "type" keys listed below expect a value to be one of MIME types: https://www.sitepoint.com/web-foundations/mime-types-complete-list/
 	"algo_exec": "python3 ReduceTables.py $localModelTables",
 	"algo_input": [
 	    { "name": "localModelTables", "src": "file", "type": "text/plain", "accepted_format": "algorun/undefined" }
@@ -36,8 +36,8 @@
 	"algo_output": [
 	    { "name": "reducedTable", "src": "reducedTable.txt", "type": "text/plain", "format": "algorun/undefined" }
 	],
-	"algo_parameters": { // list all the parameters available for your algorithm. These parameters will be available for use in your algorithm as environment variables,
-		"caching": "on" // the default caching scheme of your algorithms (on/off).
+	"algo_parameters": { 
+		"caching": "on" 
 	},
-	"algo_image": "" // Example: "ahosny/react". leave "" if you did not upload your algorithm to docker hub or if you do not know what docker hub is :).
+	"algo_image": "discretedynamics/localmodelconversions/reducetables"
 }
